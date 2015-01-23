@@ -10,12 +10,12 @@ Keen.ready(function() {
   // ----------------------------------------
   var average_temperature = new Keen.Query("average", {
     eventCollection: "sensors",
-    timeframe: "this_week",
+    timeframe: "this_month",
     targetProperty: "value",
     interval: "hourly"
   });
   client.draw(average_temperature, document.getElementById("chart-01"), {
-    chartType: "linechart",
+    chartType: "areachart",
     title: false,
     height: 250,
     width: "auto",
