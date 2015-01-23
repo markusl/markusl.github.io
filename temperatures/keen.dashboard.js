@@ -20,6 +20,7 @@ Keen.ready(function() {
     height: 250,
     width: "auto",
     chartOptions: {
+      interpolateNulls: true,
       chartArea: {
         height: "85%",
         left: "5%",
