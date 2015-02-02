@@ -10,7 +10,7 @@ Keen.ready(function() {
   // ----------------------------------------
   var average_temperature = new Keen.Query("average", {
     eventCollection: "sensors",
-    timeframe: "this_month",
+    timeframe: "last_30_days",
     targetProperty: "value",
     interval: "hourly"
   });
@@ -18,6 +18,7 @@ Keen.ready(function() {
     chartType: "areachart",
     title: false,
     height: 250,
+    vAxis: { title: 'Temperature °C', minValue: 17, maxValue: 25 },
     width: "auto",
     chartOptions: {
       interpolateNulls: true,
