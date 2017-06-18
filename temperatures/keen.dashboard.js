@@ -9,7 +9,7 @@ Keen.ready(function() {
   // Average temperatures chart
   // ----------------------------------------
   const average_temperature = new Keen.Query("average", {
-    eventCollection: "sensors",
+    eventCollection: "values",
     timeframe: "last_30_days",
     targetProperty: "value",
     interval: "hourly"
