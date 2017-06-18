@@ -1,6 +1,6 @@
-var client = new Keen({
-  projectId: "54ba3608d2eaaa159f67ea9e",
-  readKey: "11fe19b03e98e9e8cbc207e68864864ba8136edbfe83b554ef11f1a8c67855204f8861b15775393b02598c9ac5a0efe174071f8d7e697799bd046cbb84d8076db3d87589995c52254b2bda500d648324fb39a3a0f7e7decc2e4127abe771e640a4ab8a94ab90be63e085ce7272da8944"
+const client = new Keen({
+  projectId: "594677f290b36562a4aed2e7",
+  readKey: "5DF6E48C5E39D7F3AE068D332FCA76A23CAAD2041B8B079F0F2B5B23E7297036E3B6C0926FD714366A5EC67A2E1A5B152FCF8EB54C341E38A6C450E2DD283D4FA6DCCA3349AE426E544F81C697DF74C981E8EC0D911AF7A223B65F34919A0C7C"
 });
 
 Keen.ready(function() {
@@ -8,7 +8,7 @@ Keen.ready(function() {
   // ----------------------------------------
   // Average temperatures chart
   // ----------------------------------------
-  var average_temperature = new Keen.Query("average", {
+  const average_temperature = new Keen.Query("average", {
     eventCollection: "sensors",
     timeframe: "last_30_days",
     targetProperty: "value",
