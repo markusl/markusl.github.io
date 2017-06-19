@@ -20,6 +20,8 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
           <li><a href="https://keen.io">To keen.io</a></li>
+          <li><a href="https://houm.io">To houm.io</a></li>
+          <li><a href="https://www.enocean.com/en/enocean_modules/stm-330/">STM 330 documentation</a></li>
         </ul>
       </div>
     </div>
@@ -31,14 +33,25 @@
       <div class="col-sm-8">
         <div class="chart-wrapper">
           <div class="chart-title">
-            Room temperature
+            Room temperature (24 hour average)
           </div>
           <div class="chart-stage">
             <div id="chart-01"></div>
           </div>
           <div class="chart-notes">
-            Room temperatures measured by <a href="http://houm.io/">Houm.io</a> &amp; STM-330 enocean sensor.
-            Data stored in keen.io service and displayed using Github pages.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Room temperature (30 day average)
+          </div>
+          <div class="chart-stage">
+            <div id="chart-02"></div>
+          </div>
+          <div class="chart-notes">
           </div>
         </div>
       </div>
@@ -50,7 +63,12 @@
 
     <hr>
 
-    <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+    <p class="small text-muted">
+            Room temperatures measured by <a href="http://houm.io/">Houm.io</a> &amp; STM-330 enocean sensor.
+            Data stored in keen.io service and displayed using Github pages.</p>
+
+    <p class="small text-muted">
+            Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
 
   </div>
 
@@ -62,7 +80,7 @@
     Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
   </script>
 
-  <script src="assets/lib/keen-js/dist/keen.min.js"></script>
+  <script src="https://d26b395fwzu5fz.cloudfront.net/3.4.1/keen.min.js" type="text/javascript"></script>
   <script src="keen.dashboard.js"></script>
 </body>
 </html>
