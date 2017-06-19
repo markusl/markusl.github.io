@@ -35,8 +35,9 @@ const drawTemperature = function(data, chartId) {
 };
 const drawTemperature24hourAverage = () => drawTemperature(average_temperature_24_hours, "chart-01");
 const drawTemperature30DayAverage = () => drawTemperature(average_temperature_30_days, "chart-02");
+[drawTemperature30DayAverage, drawTemperature24hourAverage].forEach(Keen.ready);
 
-Keen.ready(drawTemperature30DayAverage);
-$( window ).resize(drawTemperature30DayAverage);
-Keen.ready(drawTemperature24hourAverage);
-$( window ).resize(drawTemperature24hourAverage);
+$( window ).on( "orientationchange", function( event ) {
+  drawTemperature24hourAverage();
+  drawTemperature30DayAverage();
+});
