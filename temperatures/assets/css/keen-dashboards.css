@@ -75,15 +75,24 @@ body.application hr {
     font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align: center;
     margin-bottom: 1em;
+    padding-top: 55px;
 }
 
-#current-temp-value {
+#current-temp-value, #current-temp-value-loading {
     display: block;
     font-size: 72px;
     font-weight: 700;
     line-height: 72px;
-    padding-top: 55px;
+    position:relative;
 }
-#current-temp-value::after {
-    content: " °C";
+#current-temp-value-loading {
+		-webkit-animation: rotation 1s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }

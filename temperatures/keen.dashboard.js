@@ -27,7 +27,9 @@ client.run(current_temperature, function(err, res){
     document.getElementById('current-temp-value').innerText = err;
   }
   else {
-    document.getElementById('current-temp-value').innerText = res.result.toFixed(0);
+    document.getElementById('current-temp-value-loading').style.display = "none";
+    document.getElementById('current-temp-value').style.display = "block";
+    document.getElementById('current-temp-value').innerText = res.result.toFixed(0) + " °C";
   }
 });
 const drawTemperature = function(data, chartId) {
