@@ -65,3 +65,25 @@ body.application hr {
   font-size: 12px;
   padding: 8px 10px 5px;
 }
+
+.current-temp {
+    background-color: rgb(0, 187, 222);
+    width: auto;
+    height: 200px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#current-temp-value {
+    display: block;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 72px;
+    padding-top: 55px;
+}
+#current-temp-value::after {
+    content: " °C";
+}

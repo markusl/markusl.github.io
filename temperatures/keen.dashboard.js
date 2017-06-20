@@ -15,6 +15,21 @@ const average_temperature_24_hours = new Keen.Query("average", {
   targetProperty: "value",
   interval: "hourly"
 });
+const current_temperature = new Keen.Query("average", {
+  event_collection: "values",
+  target_property: "value",
+  timeframe: "this_2_hours",
+  timezone: "UTC"
+});
+
+client.run(current_temperature, function(err, res){
+  if (err) {
+    document.getElementById('current-temp-value').innerText = err;
+  }
+  else {
+    document.getElementById('current-temp-value').innerText = res.result.toFixed(0);
+  }
+});
 const drawTemperature = function(data, chartId) {
   client.draw(data, document.getElementById(chartId), {
     chartType: "areachart",
